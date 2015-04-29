@@ -63,6 +63,7 @@ public class ShopperSim {
 //		while (agenda.getCurrentTime() <= runTime) // running the simulation 
 //			agenda.remove().run();
 //		System.out.println(numOfLanes);
+<<<<<<< HEAD
 //		Stat.displayStats(); //outputting the stats
 //		
 //		double temp = 0;  // can be commented out, just checking if the randomIntArrival is close to thirty like we wanted it to be
@@ -92,6 +93,36 @@ public class ShopperSim {
 //		Stat.displayStats(); //outputting the stats
 		
 //		Stat.reset();
+=======
+//		Stat.displayStats(); //outputting the stats
+//		
+//		double temp = 0;  // can be commented out, just checking if the randomIntArrival is close to thirty like we wanted it to be
+//		int count =0;
+//		for(int i = 0; i <= 30; i++){
+//			temp = randomIntArrival();
+//			System.out.println(temp);
+//			count +=temp;
+//		}
+//		System.out.println("Average arrival "+ count/29);
+	//} // main method
+	public void run(){
+		int distArray[] = { 10, 10, 10, 20, 20, 20, 20, 30, 30, 30, 30, 30, 40,  // distribution array for number of items in cart
+				40, 40, 40, 50, 50, 50, 50, 60, 60, 60, 70, 70, 70, 80, 80, 90,
+				100 };
+		agenda = new PQ();
+		agenda.add(new ShopperMaker(randomIntArrival(), distArray), 0);  //randomIntArrival()
+		
+		lane = new Checker[numOfLanes]; // insantiating the checkout lanes
+		for (int i=0; i<lane.length; i++)
+			lane[i] = new Checker();
+		
+		while (agenda.getCurrentTime() <= runTime) // running the simulation 
+			agenda.remove().run();
+		System.out.println(numOfLanes);
+		
+		Stat.displayStats(); //outputting the stats
+		Stat.reset();
+>>>>>>> origin/master
 	}
 
 } // ShopperSim class
