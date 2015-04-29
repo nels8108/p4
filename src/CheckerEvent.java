@@ -4,17 +4,14 @@ public class CheckerEvent implements Event {
 	
 	public Checker c;
 	public double servTime;
-//	public double idleTime;
 
 	public CheckerEvent() {
 		servTime = 0;
-//		idleTime = 0;
 	}
 	
 	public CheckerEvent(Checker c, double st) {
 		this.c = c;
 		servTime = st;
-//		idleTime = it;
 	}
 
 	public void run() {
@@ -39,7 +36,7 @@ public class CheckerEvent implements Event {
 			Shopper =  (Shopper) c.waitline.remove();
 			Stat.updateQueueStats(ShopperSim.agenda.getCurrentTime(), c.waitline.length());
 			Stat.updateWaitTimeStats(ShopperSim.agenda.getCurrentTime(), Shopper.getArrivalTime());
-			System.out.println(ShopperSim.agenda.getCurrentTime() + " - " + Shopper.getArrivalTime());
+//			System.out.println(ShopperSim.agenda.getCurrentTime() + " - " + Shopper.getArrivalTime());
 			servTime = Shopper.getItemCount()*ShopperSim.getBaggingTime();
 			ShopperSim.agenda.add(new CheckerEvent(c, servTime), servTime);
 		}

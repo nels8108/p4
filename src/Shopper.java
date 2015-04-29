@@ -12,7 +12,10 @@ public class Shopper {
 		Checker[] lane = ShopperSim.lane;
 		int minIndex = 0;
 		for (int i=0; i<lane.length; i++) {
-			//System.out.println("lane " + i + " size: " + lane[i].waitline.length());
+//			System.out.println("lane " + i + " size: " + lane[i].waitline.length());
+			if (i < ShopperSim.expressLanes && itemCount <= 10) 
+				if (lane[i].waitline.length() < lane[minIndex].waitline.length())
+					minIndex = i;
 			if (lane[i].waitline.length() < lane[minIndex].waitline.length()) {
 				minIndex = i;
 			}

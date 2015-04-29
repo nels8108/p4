@@ -77,18 +77,18 @@ public class Stat {
 
 	// private variables
 
-	private static double lastUpdateTime;
-	private static int oldQLength;
-	private static double lastQUpdateTime;
+	 static double lastUpdateTime;
+	 static int oldQLength;
+	 static double lastQUpdateTime;
 
-	private static int count;
-	private static double totalTime;
-	private static double busyTime;
-	private static double idleTime;
-	private static double maxWait;
-	private static double averageWait;
-	private static int maxQLength;
-	private static double averageQLength;
-	private static double averageServiceTime;
+	 static int count;
+	 static double totalTime;
+	 static double busyTime;
+	 static double idleTime;
+	 static double maxWait;
+	 static double averageWait;
+	 static int maxQLength;
+	 static double averageQLength;
+	 static double averageServiceTime;
 
 } // Stat class
