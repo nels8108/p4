@@ -2,6 +2,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class MultipleSim {
+	
+	static int laneCount = 10;
+
 	public static void main(String[] args) {
 		try {
 			FileWriter writer = new FileWriter("results.csv");
@@ -13,7 +16,7 @@ public class MultipleSim {
 			writer.append(',');
 			writer.append("Average interval");
 			writer.append('\n');
-			writer.append("");
+			writer.append(""+laneCount);
 			writer.append(',');
 			writer.append(""+ShopperSim.expressLanes);
 			writer.append(',');
@@ -44,9 +47,9 @@ public class MultipleSim {
 			writer.append(',');
 			writer.append("Shopper Count");
 			writer.append('\n');
-			for (int i = 10; i < 60; i++) {
+			for (int i = 0; i < 50; i++) {
 				ShopperSim n = new ShopperSim();
-				n.setNumOfLanes(i);
+				n.setNumOfLanes(laneCount);
 				n.run();
 				writer.append("" + Stat.totalTime);
 				writer.append(',');
@@ -76,6 +79,8 @@ public class MultipleSim {
 			e.printStackTrace();
 		}
 	}
+	
+
 	// // ShopperSim n = new ShopperSim();
 	// ShopperSim m = new ShopperSim();
 	//
