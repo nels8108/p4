@@ -14,10 +14,5 @@ public class Checker {
 	public boolean isBusy() {
 		return busy;
 	}
-//	public Object checkout(){
-//		
-//		Object temp  = waitline.remove();
-//		return temp;
-//	}
 	
-}
+} // Checker class

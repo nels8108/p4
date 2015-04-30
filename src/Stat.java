@@ -57,38 +57,22 @@ public class Stat {
 		System.out.println(" Avg. Service Time: " + averageServiceTime /( count ));
 		System.out.println(" Number of shoppers through system: " + count);
 		System.out.println("\n");
-		//System.out.print(totalTime + " " + idleTime + " " + busyTime + " " + averageServiceTime + " " +maxQLength + " " + averageQLength/totalTime + " " + maxWait + " " + averageWait/count + " " + averageServiceTime/count + " " + count);
 
 	} // displayStats
-	public static void reset(){
-		lastUpdateTime = 0;
-		oldQLength = 0;
-		lastQUpdateTime = 0;
-		count =0;
-		totalTime = 0;
-		busyTime = 0;
-		idleTime =0;
-		maxWait = 0;
-		averageWait = 0;
-		maxQLength = 0;
-		averageQLength = 0;
-		averageServiceTime = 0;
-	}
 
 	// private variables
 
-	 static double lastUpdateTime;
-	 static int oldQLength;
-	 static double lastQUpdateTime;
-
-	 static int count;
-	 static double totalTime;
-	 static double busyTime;
-	 static double idleTime;
-	 static double maxWait;
-	 static double averageWait;
-	 static int maxQLength;
-	 static double averageQLength;
-	 static double averageServiceTime;
+	private static double lastUpdateTime;
+	private static int oldQLength;
+	private static double lastQUpdateTime;
+	private static int count;
+	private static double totalTime;
+	private static double busyTime;
+	private static double idleTime;
+	private static double maxWait;
+	private static double averageWait;
+	private static int maxQLength;
+	private static double averageQLength;
+	private static double averageServiceTime;
 
 } // Stat class

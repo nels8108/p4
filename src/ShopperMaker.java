@@ -17,15 +17,19 @@ public class ShopperMaker implements Event {
 	}
 
 	private int selectItemCount() {
+		// pick the number of items in cart
 		int temp = itemDist[intRandomInterval(0, 29)];
 		return intRandomInterval(temp - 9, temp);
 	}
 
 	public void run() {
+		// ShopperMaker reschedule itself on each run
 		ShopperSim.agenda.add(new ShopperMaker(interval, itemDist),intRandomInterval(0, 2 * interval));
 		Shopper newShopper = new Shopper(ShopperSim.agenda.getCurrentTime(), selectItemCount());// shopper adds itself to the checker queue when initiated
 	}
 
+	// private variables
+	
 	private double interval;
 	private int[] itemDist;
 

@@ -13,7 +13,7 @@ public class N {
 	public N(Object o, N link) {
 		data = o;
 		next = link;
-//		previous = plink;
+		// previous = plink;
 	}
 
 	// selectors
@@ -28,7 +28,7 @@ public class N {
 	public N getNext() {
 		return next;
 	}
-	
+
 	public N getPrevious() {
 		return previous;
 	}
